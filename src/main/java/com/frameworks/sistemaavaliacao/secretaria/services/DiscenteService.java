@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.frameworks.sistemaavaliacao.secretaria.entities.Discente;
-import com.frameworks.sistemaavaliacao.secretaria.interfaces.DiscenteRepository;
+import com.frameworks.sistemaavaliacao.secretaria.repositories.DiscenteRepository;
 
 import java.util.List;
 import java.util.Optional;

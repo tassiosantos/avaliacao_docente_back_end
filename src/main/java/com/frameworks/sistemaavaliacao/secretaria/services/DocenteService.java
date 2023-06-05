@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.frameworks.sistemaavaliacao.secretaria.entities.Docente;
-import com.frameworks.sistemaavaliacao.secretaria.interfaces.DocenteRepository;
+import com.frameworks.sistemaavaliacao.secretaria.repositories.DocenteRepository;
 
 import java.util.List;
 import java.util.Optional;
