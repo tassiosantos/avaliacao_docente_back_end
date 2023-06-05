@@ -2,14 +2,13 @@ version: '3'
 
 services:
   postgres:
-    image: postgres:latest
+    image: postgres:13.2
     restart: always
     environment:
-      POSTGRES_USER: your_username
-      POSTGRES_PASSWORD: your_password
-      POSTGRES_DB: your_database
-    volumes:
-      - ./data:/var/lib/postgresql/data
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: avaliacao
+    # volumes:
+    #   - ./data:/var/lib/postgresql/data
     ports:
       - 5432:5432
-
