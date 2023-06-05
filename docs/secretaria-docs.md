@@ -98,12 +98,12 @@ Retrieves a list of all Docentes.
   {
     "siape": 987654,
     "nomeDocente": "Jane Smith",
-    "eCoordenador": true
+    "ecoordenador": true
   },
   {
     "siape": 123456,
     "nomeDocente": "John Walker",
-    "eCoordenador": false
+    "ecoordenador": false
   },
 ]
 
@@ -118,7 +118,7 @@ Retrieves a specific Docente by their ID.
 {
   "siape": 987654,
   "nomeDocente": "Jane Smith",
-  "eCoordenador": true
+  "ecoordenador": true
 }
 
 ### 3. Create Docente
@@ -131,13 +131,13 @@ Creates a new Docente.
 {
   "siape": 987654,
   "nomeDocente": "Jane Smith",
-  "eCoordenador": true
+  "ecoordenador": true
 }
 - **Response:** 
 {
   "siape": 987654,
   "nomeDocente": "Jane Smith",
-  "eCoordenador": true
+  "ecoordenador": true
 }
 
 ### 4. Update Docente
@@ -151,13 +151,13 @@ Updates an existing Docente.
 {
   "siape": 987654,
   "nomeDocente": "Jane Smith",
-  "eCoordenador": true
+  "ecoordenador": true
 }
 - **Response:** 
 {
   "siape": 987654,
   "nomeDocente": "Jane Smith",
-  "eCoordenador": true
+  "ecoordenador": true
 }
 
 ### 5. Delete Docente
