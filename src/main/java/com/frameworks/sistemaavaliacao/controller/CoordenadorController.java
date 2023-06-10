@@ -9,33 +9,24 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.frameworks.sistemaavaliacao.model.Docente;
-import com.frameworks.sistemaavaliacao.model.Pergunta;
 import com.frameworks.sistemaavaliacao.service.CoordenadorService;
 
 @RestController
 @RequestMapping("/coordenador")
 public class CoordenadorController {
-    private final CoordenadorService coordenadorService;
+    // private final CoordenadorService coordenadorService;
 
-    @Autowired
-    public CoordenadorController(CoordenadorService coordenadorService, PerguntaService perguntaService) {
-        this.coordenadorService = coordenadorService;
-        this.perguntaService = perguntaService;
-    }
+    // @Autowired
+    // public CoordenadorController(CoordenadorService coordenadorService) {
+    //     this.coordenadorService = coordenadorService;
+    // }
 
-    @GetMapping
-    public ResponseEntity<List<Docente>> getAllForms() {
-        List<Docente> formularios = coordenadorService.getAllForms();
-        return ResponseEntity.ok(formularios);
-    }
-
-    @PostMapping
-    public ResponseEntity<Docente> createPergunta(@RequestBody Pergunta pergunta) {
-        Docente createdPergunta = perguntaService.createDocente(pergunta);
-        return ResponseEntity.status(HttpStatus.CREATED).body(createdPergunta);
-    }
+    // @GetMapping
+    // public ResponseEntity<List<Docente>> getAllForms() {
+    //     List<Docente> formularios = coordenadorService.getAllForms();
+    //     return ResponseEntity.ok(formularios);
+    // }
 
 
     // @PostMapping

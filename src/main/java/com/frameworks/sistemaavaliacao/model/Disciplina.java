@@ -14,8 +14,6 @@ public class Disciplina {
     @Id
     private Short codDisciplina;
     
-    private String nomeDisciplina;
-    
     @OneToMany(mappedBy = "codDisciplina", cascade = CascadeType.ALL)
     @Column(name = "alocacao")
     @NotNull

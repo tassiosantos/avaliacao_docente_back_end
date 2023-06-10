@@ -24,4 +24,31 @@ public class Questionario {
     @ManyToOne
     @JoinColumn(name = "codSemestre")
     private Semestres codSemestre;
+
+    // Getters e Setters
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    // Getter e Setter para o atributo 'codPergunta'
+    public Pergunta getCodPergunta() {
+        return codPergunta;
+    }
+
+    public void setCodPergunta(Pergunta codPergunta) {
+        this.codPergunta = codPergunta;
+    }
+
+    // Getter e Setter para o atributo 'codSemestre'
+    public Semestres getCodSemestre() {
+        return codSemestre;
+    }
+
+    public void setCodSemestre(Semestres codSemestre) {
+        this.codSemestre = codSemestre;
+    }
 }

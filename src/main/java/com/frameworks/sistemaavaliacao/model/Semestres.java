@@ -13,19 +13,59 @@ import javax.validation.constraints.NotNull;
 public class Semestres {
     
     @Id
+    @Column(name = "codSemestre")
     private Integer codSemestre;
 
     @NotNull
     private String periodo;
 
     @OneToMany(mappedBy = "codSemestre", cascade = CascadeType.ALL)
-    @Column(name = "alocacao")
-    @NotNull
     private List<Alocacao> alocacoes;
 
-    
     @OneToMany(mappedBy = "codSemestre", cascade = CascadeType.ALL)
-    @Column(name = "questionario")
-    @NotNull
     private List<Questionario> questionarios;
+
+    public Semestres() {
+        // Construtor padrão vazio
+    }
+    
+    public Semestres(Integer codSemestre) {
+        this.codSemestre = codSemestre;
+    }
+
+    // Getter e Setter para o atributo 'codSemestre'
+    public Integer getCodSemestre() {
+        return codSemestre;
+    }
+
+    public void setCodSemestre(Integer codSemestre) {
+        this.codSemestre = codSemestre;
+    }
+
+    // Getter e Setter para o atributo 'periodo'
+    public String getPeriodo() {
+        return periodo;
+    }
+
+    public void setPeriodo(String periodo) {
+        this.periodo = periodo;
+    }
+
+    // Getter e Setter para o atributo 'alocacoes'
+    public List<Alocacao> getAlocacoes() {
+        return alocacoes;
+    }
+
+    public void setAlocacoes(List<Alocacao> alocacoes) {
+        this.alocacoes = alocacoes;
+    }
+
+    // Getter e Setter para o atributo 'questionarios'
+    public List<Questionario> getQuestionarios() {
+        return questionarios;
+    }
+
+    public void setQuestionarios(List<Questionario> questionarios) {
+        this.questionarios = questionarios;
+    }
 }
