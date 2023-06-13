@@ -10,7 +10,7 @@ import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class Semestres {
+public class Semestre {
     
     @Id
     @Column(name = "codSemestre")
@@ -25,11 +25,11 @@ public class Semestres {
     @OneToMany(mappedBy = "codSemestre", cascade = CascadeType.ALL)
     private List<Questionario> questionarios;
 
-    public Semestres() {
+    public Semestre() {
         // Construtor padrão vazio
     }
     
-    public Semestres(Integer codSemestre) {
+    public Semestre(Integer codSemestre) {
         this.codSemestre = codSemestre;
     }
 

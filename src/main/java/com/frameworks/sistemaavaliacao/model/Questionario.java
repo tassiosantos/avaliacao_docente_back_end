@@ -23,7 +23,7 @@ public class Questionario {
 
     @ManyToOne
     @JoinColumn(name = "codSemestre")
-    private Semestres codSemestre;
+    private Semestre codSemestre;
 
     // Getters e Setters
     public Integer getId() {
@@ -44,11 +44,11 @@ public class Questionario {
     }
 
     // Getter e Setter para o atributo 'codSemestre'
-    public Semestres getCodSemestre() {
+    public Semestre getCodSemestre() {
         return codSemestre;
     }
 
-    public void setCodSemestre(Semestres codSemestre) {
+    public void setCodSemestre(Semestre codSemestre) {
         this.codSemestre = codSemestre;
     }
 }

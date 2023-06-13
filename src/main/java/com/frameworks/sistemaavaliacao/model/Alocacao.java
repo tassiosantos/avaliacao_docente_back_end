@@ -28,5 +28,5 @@ public class Alocacao {
 
     @ManyToOne
     @JoinColumn(name = "codSemestre")
-    private Semestres codSemestre;
+    private Semestre codSemestre;
 }
