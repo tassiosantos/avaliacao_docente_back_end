@@ -2,21 +2,20 @@ package com.frameworks.sistemaavaliacao.model;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
+@Table(name = "Semestres")
 public class Semestre {
-    
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "codSemestre")
     private Integer codSemestre;
 
     @NotNull
+    @Column(name = "periodo")
     private String periodo;
 
     @OneToMany(mappedBy = "codSemestre", cascade = CascadeType.ALL)
@@ -28,7 +27,7 @@ public class Semestre {
     public Semestre() {
         // Construtor padrão vazio
     }
-    
+
     public Semestre(Integer codSemestre) {
         this.codSemestre = codSemestre;
     }
