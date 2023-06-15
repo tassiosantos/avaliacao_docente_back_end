@@ -14,7 +14,7 @@ import com.frameworks.sistemaavaliacao.model.Pergunta;
 import com.frameworks.sistemaavaliacao.service.PerguntaService;
 
 @RestController
-@RequestMapping({"/forms", "/form"})
+@RequestMapping({"/pergunta", "/perguntas"})
 public class PerguntaController {
 
     private final PerguntaService perguntaService;
@@ -29,7 +29,25 @@ public class PerguntaController {
         Pergunta createdPergunta = perguntaService.createPergunta(pergunta);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdPergunta);
     }
-    
+
+    @GetMapping
+    public ResponseEntity<List<Docente>> getAllPerguntas() {
+        List<Pergunta> perguntas = perguntaService.getAllPerguntas();
+        return ResponseEntity.ok(perguntas);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Pergunta> getPerguntaById(@PathVariable("id") Integer id) {
+        Optional<Pergunta> pergunta = perguntaService.getPerguntaById(id);
+        return pergunta.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Pergunta> updatePergunta(@PathVariable("id") Integer id, @RequestBody Pergunta pergunta) {
+        pergunta.setSiape(id);
+        Pergunta updatedPergunta = perguntaService.updatePergunta(pergunta);
+        return ResponseEntity.ok(updatedPergunta);
+    }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletePergunta(@PathVariable("id") Integer id) {
