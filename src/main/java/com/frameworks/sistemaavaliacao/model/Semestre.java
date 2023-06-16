@@ -2,34 +2,30 @@ package com.frameworks.sistemaavaliacao.model;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class Semestres {
-    
+@Table(name = "Semestres")
+public class Semestre {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "codSemestre")
     public Integer codSemestre;
 
     @NotNull
-    public String periodo;
+    @Column(name = "periodo")
+    private String periodo;
 
     @OneToMany(mappedBy = "codSemestre", cascade = CascadeType.ALL)
     public List<Alocacao> alocacoes;
 
-    public Semestres() {
+    public Semestre() {
         // Construtor padrão vazio
     }
-    
-    public Semestres(Integer codSemestre) {
+
+    public Semestre(Integer codSemestre) {
         this.codSemestre = codSemestre;
     }
 

@@ -23,7 +23,7 @@ public class Questionario {
 
     @OneToOne
     @JoinColumn(name = "codSemestre")
-    public Semestres codSemestre;
+    private Semestre codSemestre;
 
     // Getters e Setters
     public Integer getId() {
@@ -37,11 +37,11 @@ public class Questionario {
     // Getter e Setter para o atributo 
 
     // Getter e Setter para o atributo 'codSemestre'
-    public Semestres getCodSemestre() {
+    public Semestre getCodSemestre() {
         return codSemestre;
     }
 
-    public void setCodSemestre(Semestres codSemestre) {
+    public void setCodSemestre(Semestre codSemestre) {
         this.codSemestre = codSemestre;
     }
 }

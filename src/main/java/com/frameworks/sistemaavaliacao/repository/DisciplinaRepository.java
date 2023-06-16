@@ -7,7 +7,5 @@ import com.frameworks.sistemaavaliacao.model.Disciplina;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 @Repository
-public interface DisciplinaRepository extends JpaRepository<Disciplina, Long>{
-
-        
+public interface DisciplinaRepository extends JpaRepository<Disciplina, Integer>{
 }
