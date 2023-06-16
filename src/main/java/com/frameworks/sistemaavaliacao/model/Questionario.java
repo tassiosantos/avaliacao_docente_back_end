@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -15,13 +15,13 @@ public class Questionario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;
+    public Integer id;
 
-    @ManyToOne
-    @JoinColumn(name = "codPergunta")
-    private Pergunta codPergunta;
+    // @ManyToOne
+    // @JoinColumn(name = "codPergunta")
+    // public Pergunta codPergunta;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "codSemestre")
     private Semestre codSemestre;
 
@@ -34,14 +34,7 @@ public class Questionario {
         this.id = id;
     }
 
-    // Getter e Setter para o atributo 'codPergunta'
-    public Pergunta getCodPergunta() {
-        return codPergunta;
-    }
-
-    public void setCodPergunta(Pergunta codPergunta) {
-        this.codPergunta = codPergunta;
-    }
+    // Getter e Setter para o atributo 
 
     // Getter e Setter para o atributo 'codSemestre'
     public Semestre getCodSemestre() {

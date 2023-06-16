@@ -1,11 +1,16 @@
 package com.frameworks.sistemaavaliacao.controller;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,4 +42,23 @@ public class QuestionarioController {
         return ResponseEntity.noContent().build();
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Optional<Questionario>> findOneQuestionario(@PathVariable("id") Integer id) {
+        Optional<Questionario> questionario = questionarioService.getOneQuestionario(id);
+        return ResponseEntity.status(HttpStatus.OK).body(questionario);
+    }
+
+    @GetMapping()
+    public ResponseEntity<List<Questionario>> findAllQuestionarios() {
+        List<Questionario> questionarios = questionarioService.getAllQuestionarios();
+
+        return ResponseEntity.status(HttpStatus.OK).body(questionarios);
+    }
+
+    @PutMapping("/{id}")
+    public void updateQuestionario(@PathVariable("id") Integer id, @RequestBody Questionario questionario) {
+        questionario.setId(id);
+
+        questionarioService.updateQuestionario(questionario);
+    }
 }
