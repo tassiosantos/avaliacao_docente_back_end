@@ -11,162 +11,75 @@ Retrieves a list of all Forms.
 - **Response:** 
 [
   {
-    "matricula": 123456,
-    "nomeDiscente": "John Doe"
-  },
-  {
-    "matricula": 987654,
-    "nomeDiscente": "Jane Smith"
+    "id": 2,
+    "codSemestre": {
+      "codSemestre": 1,
+      "periodo": "2",
+      "alocacoes": []
+    }
   }
 ]
 
 
-### 2. Get Discente by ID
+### 2. Get Form by ID
 
-Retrieves a specific Discente by their ID.
+Retrieves a specific Form by their ID.
 
-- **URL:** `/discentes/{id}`
+- **URL:** `/form/{id}`
 - **Method:** `GET`
-- **Parameters:** `id` (integer) - The ID of the Discente
+- **Parameters:** `id` (integer) - The ID of the Form
 - **Response:** 
 {
-  "matricula": 123456,
-  "nomeDiscente": "John Doe"
+  "id": 2,
+  "codSemestre": {
+    "codSemestre": 1,
+    "periodo": "2",
+    "alocacoes": []
+  }
 }
 
 
-### 3. Create Discente
+### 3. Create Form
 
-Creates a new Discente.
+Creates a new Form.
 
-- **URL:** `/discentes`
+- **URL:** `/form`
 - **Method:** `POST`
 - **Request Body:** 
 {
-  "matricula": 123456,
-  "nomeDiscente": "John Doe"
+  "codSemestre": 1
 }
 
 - **Response:** 
 {
-  "matricula": 123456,
-  "nomeDiscente": "John Doe"
+  "id": 2,
+  "codSemestre": {
+    "codSemestre": 1,
+    "periodo": null,
+    "alocacoes": null
+  }
 }
 
 
-### 4. Update Discente
+### 4. Update Form
 
-Updates an existing Discente.
+Updates an existing Form.
 
-- **URL:** `/discentes/{id}`
+- **URL:** `/form/{id}`
 - **Method:** `PUT`
-- **Parameters:** `id` (integer) - The ID of the Discente
+- **Parameters:** `id` (integer) - The ID of the Form
 - **Request Body:** 
 {
-  "matricula": 123456,
-  "nomeDiscente": "Updated Name"
+  "codSemestre": 2
 }
 
-- **Response:** 
-{
-  "matricula": 123456,
-  "nomeDiscente": "Updated Name"
-}
-
-
-### 5. Delete Discente
-
-Deletes an existing Discente.
-
-- **URL:** `/discentes/{id}`
-- **Method:** `DELETE`
-- **Parameters:** `id` (integer) - The ID of the Discente
 - **Response:** HTTP status code indicating the success of the operation
 
-## Docentes Endpoints
+### 5. Delete Form
 
-This API provides the following endpoints for managing Docentes (teachers):
+Deletes an existing Form.
 
-### 1. Get All Docentes
-
-Retrieves a list of all Docentes.
-
-- **URL:** `/docentes`
-- **Method:** `GET`
-- **Response:** 
-[
-  {
-    "siape": 987654,
-    "nomeDocente": "Jane Smith",
-    "ecoordenador": true
-  },
-  {
-    "siape": 123456,
-    "nomeDocente": "John Walker",
-    "ecoordenador": false
-  },
-]
-
-### 2. Get Docente by ID
-
-Retrieves a specific Docente by their ID.
-
-- **URL:** `/docentes/{id}`
-- **Method:** `GET`
-- **Parameters:** `id` (integer) - The ID of the Docente
-- **Response:** 
-{
-  "siape": 987654,
-  "nomeDocente": "Jane Smith",
-  "ecoordenador": true
-}
-
-### 3. Create Docente
-
-Creates a new Docente.
-
-- **URL:** `/docentes`
-- **Method:** `POST`
-- **Request Body:** 
-{
-  "siape": 987654,
-  "nomeDocente": "Jane Smith",
-  "ecoordenador": true
-}
-- **Response:** 
-{
-  "siape": 987654,
-  "nomeDocente": "Jane Smith",
-  "ecoordenador": true
-}
-
-### 4. Update Docente
-
-Updates an existing Docente.
-
-- **URL:** `/docentes/{id}`
-- **Method:** `PUT`
-- **Parameters:** `id` (integer) - The ID of the Docente
-- **Request Body:** 
-{
-  "siape": 987654,
-  "nomeDocente": "Jane Smith",
-  "ecoordenador": true
-}
-- **Response:** 
-{
-  "siape": 987654,
-  "nomeDocente": "Jane Smith",
-  "ecoordenador": true
-}
-
-### 5. Delete Docente
-
-Deletes an existing Docente.
-
-- **URL:** `/docentes/{id}`
+- **URL:** `/form/{id}`
 - **Method:** `DELETE`
-- **Parameters:** `id` (integer) - The ID of the Docente
+- **Parameters:** `id` (integer) - The ID of the Form
 - **Response:** HTTP status code indicating the success of the operation
-
-Please note that for the `GET` endpoints, you can also include query parameters to filter or sort the results.
