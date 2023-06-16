@@ -77,4 +77,7 @@ public class Pergunta {
     public void setRespostas(List<Resposta> respostas) {
         this.respostas = respostas;
     }
+
+    public void setSiape(Integer id) {
+    }
 }

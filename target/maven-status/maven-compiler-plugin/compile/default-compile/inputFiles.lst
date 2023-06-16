@@ -28,4 +28,5 @@
 /media/tassio/Arquivos_ssd/Documents/sistema-avaliacao/src/main/java/com/frameworks/sistemaavaliacao/repository/QuestionarioRepository.java
 /media/tassio/Arquivos_ssd/Documents/sistema-avaliacao/src/main/java/com/frameworks/sistemaavaliacao/service/DocenteService.java
 /media/tassio/Arquivos_ssd/Documents/sistema-avaliacao/src/main/java/com/frameworks/sistemaavaliacao/service/PerguntaService.java
+/media/tassio/Arquivos_ssd/Documents/sistema-avaliacao/src/main/java/com/frameworks/sistemaavaliacao/repository/PerguntaRepository.java
 /media/tassio/Arquivos_ssd/Documents/sistema-avaliacao/src/main/java/com/frameworks/sistemaavaliacao/model/Semestre.java
