@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
@@ -13,17 +15,15 @@ import javax.validation.constraints.NotNull;
 public class Semestres {
     
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "codSemestre")
-    private Integer codSemestre;
+    public Integer codSemestre;
 
     @NotNull
-    private String periodo;
+    public String periodo;
 
     @OneToMany(mappedBy = "codSemestre", cascade = CascadeType.ALL)
-    private List<Alocacao> alocacoes;
-
-    @OneToMany(mappedBy = "codSemestre", cascade = CascadeType.ALL)
-    private List<Questionario> questionarios;
+    public List<Alocacao> alocacoes;
 
     public Semestres() {
         // Construtor padrão vazio
@@ -60,12 +60,5 @@ public class Semestres {
         this.alocacoes = alocacoes;
     }
 
-    // Getter e Setter para o atributo 'questionarios'
-    public List<Questionario> getQuestionarios() {
-        return questionarios;
-    }
-
-    public void setQuestionarios(List<Questionario> questionarios) {
-        this.questionarios = questionarios;
-    }
+    // Getter e Setter para o atributo
 }
