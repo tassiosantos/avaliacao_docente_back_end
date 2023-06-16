@@ -17,19 +17,19 @@ public class Pergunta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "codPergunta")
-    private Integer codPergunta;
+    public Integer codPergunta;
 
     @Column(name = "descricao", length = 200)
-    private String descricao;
+    public String descricao;
 
     @Column(name = "tipoPergunta", length = 40)
-    private String tipoPergunta;
+    public String tipoPergunta;
+
+    // @OneToMany(mappedBy = "codPergunta", cascade = CascadeType.ALL)
+    // public List<Questionario> questionarios;
 
     @OneToMany(mappedBy = "codPergunta", cascade = CascadeType.ALL)
-    private List<Questionario> questionarios;
-
-    @OneToMany(mappedBy = "codPergunta", cascade = CascadeType.ALL)
-    private List<Resposta> respostas;
+    public List<Resposta> respostas;
 
     // Getter e Setters
 
@@ -68,13 +68,6 @@ public class Pergunta {
     }
 
     // Getter e Setter para o atributo 'questionarios'
-    public List<Questionario> getQuestionarios() {
-        return questionarios;
-    }
-
-    public void setQuestionarios(List<Questionario> questionarios) {
-        this.questionarios = questionarios;
-    }
 
     // Getter e Setter para o atributo 'respostas'
     public List<Resposta> getRespostas() {

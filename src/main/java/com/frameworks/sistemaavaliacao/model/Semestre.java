@@ -12,17 +12,14 @@ public class Semestre {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "codSemestre")
-    private Integer codSemestre;
+    public Integer codSemestre;
 
     @NotNull
     @Column(name = "periodo")
     private String periodo;
 
     @OneToMany(mappedBy = "codSemestre", cascade = CascadeType.ALL)
-    private List<Alocacao> alocacoes;
-
-    @OneToMany(mappedBy = "codSemestre", cascade = CascadeType.ALL)
-    private List<Questionario> questionarios;
+    public List<Alocacao> alocacoes;
 
     public Semestre() {
         // Construtor padrão vazio
@@ -59,12 +56,5 @@ public class Semestre {
         this.alocacoes = alocacoes;
     }
 
-    // Getter e Setter para o atributo 'questionarios'
-    public List<Questionario> getQuestionarios() {
-        return questionarios;
-    }
-
-    public void setQuestionarios(List<Questionario> questionarios) {
-        this.questionarios = questionarios;
-    }
+    // Getter e Setter para o atributo
 }
