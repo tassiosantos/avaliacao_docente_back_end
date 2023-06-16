@@ -1,16 +1,1 @@
-com/frameworks/sistemaavaliacao/secretaria/entities/Disciplina.class
-com/frameworks/sistemaavaliacao/secretaria/controllers/DocenteController.class
-com/frameworks/sistemaavaliacao/secretaria/entities/Secretaria.class
-com/frameworks/sistemaavaliacao/secretaria/entities/Docente.class
-com/frameworks/sistemaavaliacao/secretaria/entities/Usuario.class
 com/frameworks/sistemaavaliacao/SistemaAvaliacaoApplication.class
-com/frameworks/sistemaavaliacao/secretaria/controllers/DiscenteController.class
-com/frameworks/sistemaavaliacao/secretaria/repositories/DiscenteRepository.class
-com/frameworks/sistemaavaliacao/secretaria/services/DisciplinaService.class
-com/frameworks/sistemaavaliacao/models/Semestres.class
-com/frameworks/sistemaavaliacao/secretaria/entities/Discente.class
-com/frameworks/sistemaavaliacao/secretaria/repositories/DisciplinaRepository.class
-com/frameworks/sistemaavaliacao/secretaria/controllers/DisciplinaController.class
-com/frameworks/sistemaavaliacao/secretaria/services/DocenteService.class
-com/frameworks/sistemaavaliacao/secretaria/repositories/DocenteRepository.class
-com/frameworks/sistemaavaliacao/secretaria/services/DiscenteService.class
